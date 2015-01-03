@@ -1,0 +1,47 @@
+html{
+	background-color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	position: relative;
+	border: 2px solid black;
+	height:auto;
+	margin: 1%;
+	width: 95%;
+	min-height: 250px;
+}
+
+.title {
+	position: absolute;
+	background-color: red;
+	border: 2px solid black;
+	width: 98.5%;
+	height: 15%;
+	margin: .5%;
+}
+
+.date {
+	position: absolute;
+	background-color: blue;
+	border: 2px solid black;
+	width: 20%;
+	top: 20%;
+	margin: .5%;
+	right: 0%;
+	font-size: .7em;
+	height: 50px;
+}
+
+.content {
+	position: absolute;
+	background-color: green;
+	border: 2px solid black;
+	margin: .5%;
+	width: 98.5%;
+	top: 32%;
+	height: 50px
+}
