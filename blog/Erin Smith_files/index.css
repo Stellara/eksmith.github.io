@@ -1,0 +1,56 @@
+html{
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	background-color: #A8FEE3;
+	padding: 20px;
+}
+
+h1 {
+	margin-bottom: 0px;
+	margin-top: 50px;
+	margin-left: 25px;
+	font-family: Arial;
+}
+
+body {
+	margin: 0px;
+	width: 100%;
+}
+
+main {
+	padding: 100px;
+}
+
+footer {
+	background-color: purple;
+	padding: 20px;
+}
+
+footer nav a {
+	padding: 10px;
+}
+
+.header-nav {
+	font-family: Georgia;
+	float: right;
+	margin-top: -20px;
+	margin-right: 25px;
+}
+
+.footer-nav {
+	text-align: center;
+}
+
+.nav-links {
+	padding: 10px;
+	color: red;
+}
+
+.index-body {
+}

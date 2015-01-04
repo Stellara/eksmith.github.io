@@ -1,0 +1,80 @@
+CSS...the final frontier. These are the voyages of a halpless would be developer. Her continuing mission to explore strange new code. To seek out new styles and new div infestations. To pleadingly (while muttering profanties and making spastic gestures) get the boxes to go where they've never gone before. 
+
+Positioning an element using CSS is like bringing a <a href="http://en.memory-alpha.org/wiki/The_Trouble_with_Tribbles_%28episode%29">tribble</a> back to the Enterprise. It won't stay where you put it and before you know it you have more elements in places they were never supposed to be.It seemed like a cute and cuddly idea at the time. <em>(I'm sure there's a better analogy, and any other Trekkies out there feel free to make one, but it won't be as cute.)</em> 
+
+The problem with using positioning is that if you attempt to use it without very clearly understanding what each value does, you might make more problems for yourself and make your page look worse than it would have without any positioning at all. You can generally strong arm elements where you want them to be through trial and error, by applying different values to a selector until it looks how you want it to, but that can be tedious, makes fixing bugs difficult, and can have a domino effect later if you change some other related element's position. 
+
+Allow me to pilot you through this murky quadrant of web development space and we might just make it back to Earth. 
+
+A preliminary scan of "space"
+
+To begin with, let's get the lay of the universe we're working in. Elements are presented on a page according to their <b>normal flow</b>. This is just where they fall into place without positioning, sort of like the effect of gravity on objects in the physical world.
+
+The position property in CSS allows you to move elements where you want them to be visually, and to put them <b>out of flow</b> if you wish. The name is pretty clear and that's what you would expect for it to do. Going into the specific values that this property can take is where it gets complicated. Those values for our purposes are static, relative, absolute, and <b>fixed</b>.
+
+Static 
+
+Anything that is not positioned is static. Elements have the static value by default if you don't give them any other value. This means they will just stack together in the normal flow that you have laid for them in your html. 
+
+HTML
+
+<pre><code> 
+  <body>
+  	<div id="box-1"></div>
+	<div id="box-2"></div>
+	<div id="box-3"></div>
+  </body>
+</code></pre> 
+
+CSS
+
+<pre><code>
+#box-1 {
+	height: 200px;
+	width: 200px;
+	background-color: red;
+}
+
+#box-2 {
+	height: 200px;
+	width: 200px;
+	background-color: #EDDB15;
+}
+
+#box-3 {
+	height: 200px;
+	width: 200px;
+	background-color: #15B0ED;
+}
+</code></pre>
+
+How it looks: 
+
+<img src="">
+
+This is exactly the same as it would look with static positioning: #img src here
+
+<pre><code>
+#box-1 {
+	height: 200px;
+	width: 200px;
+	background-color: red;
+	position: static;
+}
+
+#box-2 {
+	height: 200px;
+	width: 200px;
+	background-color: #EDDB15;
+	position: static;
+}
+
+#box-3 {
+	height: 200px;
+	width: 200px;
+	background-color: #15B0ED;
+	position: static;
+}
+</code></pre>
+
+Since this is the default, you usually don't need to explicitly state it. 

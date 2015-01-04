@@ -1,0 +1,84 @@
+html{
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: #4B0775;
+}
+
+a:visited {
+	color: grey;
+}
+
+a:hover {
+	color: #2FEDE4
+}
+
+body {
+	margin: 0px;
+	width: 100%;
+}
+
+header {
+	background-color: #4B0775;
+	padding: 20px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+#logo {
+	margin-bottom: 0px;
+	margin-top: 50px;
+	margin-left: 25px;
+	font-family: 'Pacifico', cursive;
+	font-size: 45px;
+	color: white;
+	display: block;
+}
+
+h2 {
+	text-align: center;
+	font-family: 'Raleway', cursive;
+}
+
+main {
+	padding: 100px;
+}
+
+footer {
+	padding: 20px;
+}
+
+footer nav a {
+	padding: 10px;
+}
+
+.header-nav {
+	float: right;
+	margin-top: -20px;
+	margin-right: 25px;
+}
+
+.home-intro {
+	font-family: 'Raleway', cursive;
+	font-size: 16px;
+	text-align: center;
+}
+
+.fill {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image:"../imgs/purplenebula.jpg";
+}
+
+.footer-nav {
+	text-align: center;
+}
+
+.header-links {
+	padding: 10px;
+	color: white;
+	font-family: 'Raleway', cursive;
+}
+

@@ -1,0 +1,30 @@
+
+"I don't git it!" - A guide to version control, git, and GitHub
+
+You may have seen the cute GitHub mascot, the Octocat, on stickers on the front of someone's laptop and wondered what it was or you may have heard someone mention it. Developers tend to use git and GitHub interchangeably, so it would make sense that a wannabe developer such as myself would confuse the two when they are in fact different. I've known about GitHub for about a year now, but have only used it sparingly. In my first week as a student in Phase 0 of DevBootCamp I've really come to appreciate the difference between git, GitHub, and the benefits of version control. What follows is a primer for the unitiated and just plain confused. 
+
+Version Control 
+
+Version control is simply the idea that you keep track of changes that you make to a file or files over time. This allows you to revert back to any earlier state before a change was made and to compare changes. Developers use version control for a variety of reasons. It allows developers to maintain the most correct, up to date, working version of their code and to make changes, but to have that working version as a safety net that they can fall back to if the changes don't work out. It allows developers to keep snapshots, or "save points" so that they can make changes incrementally. Finally, version control allows multiple people to work on the same code at the same time, which is necessary for big teams, distributed teams, and open source projects. 
+
+Git 
+
+So how does git play into this? It is version control software. You install it onto your computer and it does the work of tracking changes for you. Git allows you to move backward and forward through time in your project. One of the many wonderful things about using it is that there are just about 10 key commands you need to master to begin using it effectively. The key thing to remember about git is that it's local. It's only on your computer where you have saved the files it tracks. Which brings us to the key difference between git and GitHub. 
+
+GitHub 
+
+GitHub is an online social networking site that serves as a place to store your working directories. GitHub calls them "repositories". You upload your work from your computer onto GitHub and then not only can you then access it from any computer, but other people can access it too. They can copy your work, make their own changes, and ask you to take a look at their changes and merge them into your work. You can do this for other people too! It allows for remote collaboration. 
+
+Keys to Win
+
+Some keys for success with using git and GitHub are to commit A LOT, to commit early, and to use good, clear commit messages. The more you commit, the more save points you'll have at your disposal and you'll be able to preserve lines of thought, which is immeasurably valuable. Seeing a line of thiking you had in a good commit message might help you get back to it if you've gone astray with future changes. 
+
+To sum it all up: 
+
+Version control is using software to track changes you've made to a file or files over time. Git is just one of many pieces of software you can use to do this and it lives locally on your computer. GitHub is remote and is an online home for your files so that you can save your changes online and collaborate with others on them. 
+
+
+# Give the page a name and begin to format html. 
+#
+# Name page "Erin's Tech Blog" and move subtitle from 
+# header to paragraph to try use as paragraph headline.
