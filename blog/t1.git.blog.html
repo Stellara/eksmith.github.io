@@ -1,49 +1,87 @@
 <!DOCTYPE html>
-<head>
-  <title>Erin Smith's tech blog</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="your-stylesheet-link-here.css">
-</head>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Pacifico|Raleway' rel='stylesheet' type='text/css'>
+    <title>I Don't Git It!</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Blog of Erin Smith, DevBootcamp student and apprentice web developer.">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/website.css">
+  </head>
 
-<main>
-  <h1>"I don't git it!" - A guide to version control, git, and GitHub</h1>
-  <h4>12.12.14</h4>
+<body>
+  <header>
+    <a href="/" id="logo">Erin Smith</a>
+    <nav class="header-nav">
+      <a href="x" class="header-links">About</a>
+      <a href="/blog/blogindex.html" class="header-links">Writings</a>
+      <a href="x" class="header-links">Projects</a>
+      <a href="x" class="header-links">Connect</a>
+    </nav>
+  </header>
 
-  <section>
-    <p>
-    You may have seen the cute GitHub mascot, the Octocat, on stickers on the front of someone's laptop and wondered what it was or you may have heard someone mention it. Developers tend to use git and GitHub interchangeably, so it would make sense that a wannabe developer such as myself would confuse the two when they are in fact different. I've known about GitHub for about a year now, but have only used it sparingly. In my first week as a student in Phase 0 of DevBootCamp I've really come to appreciate the difference between git, GitHub, and the benefits of version control. What follows is a primer for the unitiated and just plain confused. 
-    </p>
+  <main>
+    <div class="blog-body">
+        <h1 id="blog-title">"I don't git it!"</h1>
+        <h3 id="subtitle">
+          A guide to version control, git, and GitHub
+        </h3>
 
-    <h2>Version Control</h2>
-    <p>
-    Version control is simply the idea that you keep track of changes that you make to a file or files over time. This allows you to revert back to any earlier state before a change was made and to compare changes. Developers use version control for a variety of reasons. It allows developers to maintain the most correct, up to date, working version of their code and to make changes, but to have that working version as a safety net that they can fall back to if the changes don't work out. It allows developers to keep snapshots, or "save points" so that they can make changes incrementally. Finally, version control allows multiple people to work on the same code at the same time, which is necessary for big teams, distributed teams, and open source projects. 
-    </p>
+    <div class="post-container">
+      <h4 id="date">December, 12 2014</h4> 
+      <p class="post-content">
+        You may have seen the cute GitHub mascot, the Octocat, on stickers on the front of someone's laptop and wondered what it was or you may have heard someone mention it. Developers tend to use git and GitHub interchangeably, so it would make sense that a wannabe developer such as myself would confuse the two when they are in fact different. I've known about GitHub for about a year now, but have only used it sparingly. In my first week as a student in Phase 0 of DevBootCamp I've really come to appreciate the difference between git, GitHub, and the benefits of version control. What follows is a primer for the unitiated and just plain confused. 
+      </p>
+      
+      <h2 class="subtopic">Version Control</h2>
+      <p class="post-content">
+        Version control is simply the idea that you keep track of changes that you make to a file or files over time. This allows you to revert back to any earlier state before a change was made and to compare changes. Developers use version control for a variety of reasons. It allows developers to maintain the most correct, up to date, working version of their code and to make changes, but to have that working version as a safety net that they can fall back to if the changes don't work out. It allows developers to keep snapshots, or "save points" so that they can make changes incrementally. Finally, version control allows multiple people to work on the same code at the same time, which is necessary for big teams, distributed teams, and open source projects. 
+      </p>
 
-    <h2>Git</h2>
-    <p>
-    So how does git play into this? It is version control software. You install it onto your computer and it does the work of tracking changes for you. Git allows you to move backward and forward through time in your project. One of the many wonderful things about using it is that there are just about 10 commands you need to master to begin using it effectively. The key thing to remember about git is that it's local. It's only on your computer where you have saved the files it tracks. Which brings us to the difference between git and GitHub.
-    </p>
+      <h2 class="subtopic">Git</h2>
+      <p class="post-content">
+        So how does git play into this? It is version control software. You install it onto your computer and it does the work of tracking changes for you. Git allows you to move backward and forward through time in your project. One of the many wonderful things about using it is that there are just about 10 commands you need to master to begin using it effectively. The key thing to remember about git is that it's local. It's only on your computer where you have saved the files it tracks. Which brings us to the difference between git and GitHub.
+      </p>
 
-    <h2>GitHub</h2>
-    <p>
-    GitHub is an online social networking site that serves as a place to store your working directories. GitHub calls them "repositories". You upload your work from your computer onto GitHub and then not only can you then access it from any computer, but other people can access it too. They can copy your work, make their own changes, and ask you to take a look at their changes and merge them into your work. You can do this for other people too! It allows for remote collaboration. Git is the software on your computer, GitHub is the website that stores your files and you move them from your computer to GitHub.
-    </p>
+      <h2 class="subtopic">GitHub</h2>
+      <p class="post-content">
+        GitHub is an online social networking site that serves as a place to store your working directories. GitHub calls them "repositories". You upload your work from your computer onto GitHub and then not only can you then access it from any computer, but other people can access it too. They can copy your work, make their own changes, and ask you to take a look at their changes and merge them into your work. You can do this for other people too! It allows for remote collaboration. Git is the software on your computer, GitHub is the website that stores your files and you move them from your computer to GitHub.
+      </p>
 
-    <h2>To sum it all up...</h2>
-    <p>
-    Version control is using software to track changes you've made to a file or files over time. Git is just one of many pieces of software you can use to do this and it lives locally on your computer. GitHub is remote and is an online home for your files so that you can save your changes online and collaborate with others on them.  
-    </p>
+      <h2 class="subtopic">To sum it all up...</h2>
+      <p class="post-content">
+        Version control is using software to track changes you've made to a file or files over time. Git is just one of many pieces of software you can use to do this and it lives locally on your computer. GitHub is remote and is an online home for your files so that you can save your changes online and collaborate with others on them.
+      </p>
 
-    <h2>Keys to Win!</h2>
-    <p>
-    Some keys for success with using git and GitHub are to move your work from your computer to GitHub a lot (this is called "committing"), to commit early, and to use good, clear commit messages. The more you commit, the more save points you'll have at your disposal and you'll be able to preserve lines of thought, which is immeasurably valuable. Seeing a line of thinking you had in a good commit message might help you get back to it if you've gone astray with future changes. 
+      <h2 class="subtopic">Keys to Win!</h2>
+      <p class="post-content">
+        Some keys for success with using git and GitHub are to move your work from your computer to GitHub a lot (this is called "committing"), to commit early, and to use good, clear commit messages. The more you commit, the more save points you'll have at your disposal and you'll be able to preserve lines of thought, which is immeasurably valuable. Seeing a line of thinking you had in a good commit message might help you get back to it if you've gone astray with future changes.
+      </p>
 
-    Understanding what version control is and the difference between git and GitHub is just the first step toward mastery and it will always be an ever evolving journey. Making good use of these tools will help you move further along the way. 
+      <p class="post-content">
+        Understanding what version control is and the difference between git and GitHub is just the first step toward mastery and it will always be an ever evolving journey. Making good use of these tools will help you move further along the way.
+      </p>
+      
+    </div>
+  </div>
 
-    </p>
+      <h4 class="subtopic">Previous Posts</h4>
+      <ul>
+        <li>
+          <a href="/blog/c1.chefs.kitchen.html">Creator Culture At DevBootCamp</a>
+        </li>
+        <li>
+          <a href="/blog/t1.git.blog.html">"I don't git it!"</a>
+        </li>
+      </ul>
+    </main>
 
-
-
-    
-  </section>
-</main>
+    <footer>
+        <nav class="footer-nav">
+          <a href="https://twitter.com/ekristines"><i class="fa fa-twitter fa-3x"></i></a>
+          <a href="http://www.linkedin.com/pub/erin-smith/a9/301/b73"><i class="fa fa-linkedin fa-3x"></i></a>
+          <a href="https://github.com/eksmith"><i class="fa fa-github fa-3x"></i></a>
+        </nav>
+    </footer>
+  </body>
+</html>
