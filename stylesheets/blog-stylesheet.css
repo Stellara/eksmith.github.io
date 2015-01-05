@@ -1,47 +1,92 @@
-html{
-	background-color: #ffffff;
+
+html {
+  box-sizing: border-box;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
+  color: #4B0775;
 }
 
-.container {
-	position: relative;
-	border: 2px solid black;
-	height:auto;
-	margin: 1%;
-	width: 95%;
-	min-height: 250px;
+a:visited {
+  color: grey;
 }
 
-.title {
-	position: absolute;
-	background-color: red;
-	border: 2px solid black;
-	width: 98.5%;
-	height: 15%;
-	margin: .5%;
+a:hover {
+  color: #2FEDE4
 }
 
-.date {
-	position: absolute;
-	background-color: blue;
-	border: 2px solid black;
-	width: 20%;
-	top: 20%;
-	margin: .5%;
-	right: 0%;
-	font-size: .7em;
-	height: 50px;
+body {
+  margin: 0px;
+  width: 100%;
 }
 
-.content {
-	position: absolute;
-	background-color: green;
-	border: 2px solid black;
-	margin: .5%;
-	width: 98.5%;
-	top: 32%;
-	height: 50px
+h2 {
+  text-align: center;
+  font-family: 'Raleway', cursive;
 }
+
+h3 {
+  text-align: center;
+  font-family: 'Raleway', cursive;
+}
+
+h4 {
+	text-align: center;
+	font-family: 'Raleway', cursive;
+}
+
+.subtopic {
+  text-align: left;
+  font-family: 'Raleway', cursive;
+  padding: 20px 20px 20px 0px;
+}
+
+main {
+  padding: 100px;
+}
+
+#subtitle {
+  text-align: center;
+  font-family: 'Raleway', cursive;
+  margin-top: 0px;
+}
+
+#blog-title {
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+  margin-bottom: 5px;
+}
+
+#date {
+  text-align: right;
+}
+
+#intro-quote {
+	font-style: italic;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+#static-example {
+	float: right;
+}
+
+.post-container {
+	padding: 10px;
+}
+
+.post-content {
+  font-family: 'Raleway', cursive;
+  font-size: 16px;
+}
+
+.key-terms {
+	color: #D415ED;
+	font-weight: 700;
+}
+
+.blog-image {
+	padding: 10px;
+}
+
