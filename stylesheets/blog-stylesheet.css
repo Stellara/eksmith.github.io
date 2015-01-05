@@ -31,6 +31,17 @@ h3 {
   font-family: 'Raleway', cursive;
 }
 
+h4 {
+	text-align: center;
+	font-family: 'Raleway', cursive;
+}
+
+.subtopic {
+  text-align: left;
+  font-family: 'Raleway', cursive;
+  padding: 20px 20px 20px 0px;
+}
+
 main {
   padding: 100px;
 }
@@ -51,6 +62,16 @@ main {
   text-align: right;
 }
 
+#intro-quote {
+	font-style: italic;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+#static-example {
+	float: right;
+}
+
 .post-container {
 	padding: 10px;
 }
@@ -58,5 +79,14 @@ main {
 .post-content {
   font-family: 'Raleway', cursive;
   font-size: 16px;
+}
+
+.key-terms {
+	color: #D415ED;
+	font-weight: 700;
+}
+
+.blog-image {
+	padding: 10px;
 }
 

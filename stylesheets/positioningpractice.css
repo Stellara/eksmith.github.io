@@ -2,18 +2,20 @@
 	height: 200px;
 	width: 200px;
 	background-color: red;
-	position: static;
+	position: fixed;
+	left: 100px;
+	top: 100px;
 }
 
 #box-2 {
-	height: 200px;
+	height: 700px;
 	width: 200px;
 	background-color: #EDDB15;
 	position: static;
 }
 
 #box-3 {
-	height: 200px;
+	height: 700px;
 	width: 200px;
 	background-color: #15B0ED;
 	position: static;
