@@ -24,216 +24,157 @@
 
     <div class="featured-post">
 
-      <h1 id="blog-title">"How did this get here?!"</h1>
-      <h3 id="subtitle">CSS Positioning 101</h3>
+      <h1 id="blog-title">Arrays and Hashes</h1>
+      <h3 id="subtitle">Some of Ruby's Data Structures 101</h3>
 
       <div class="post-container">
-        <h4 id="date">January 4, 2015</h4>
-        <p class="post-content" id="intro-quote">
-          CSS...the final frontier. These are the voyages of a halpless would be developer. Her continuing mission to explore strange new code. To seek out new styles and new div infestations. To pleadingly (while muttering profanties and making spastic gestures) get the boxes to go where they've never gone before.
+        <h4 id="date">January 11, 2015</h4>
+ 
+      <p class="post-content">
+        Arrays and hashes are two of the most fundamental data structures in all of computer science. They both store collections of objects that can be accessed after their creation. They are also flexible structures and grow or shrink in size to fit the number of objects in them and they can hold a mixture of different types of objects.
+      </p>
+
+      <p class="post-content"> 
+        Arrays and hashes are easy to create and use in Ruby and come with powerful built-in methods that will let you hit the ground running and start to do cool things with them very quickly. 
+      </p>
+
+      <h2 class="subtopic">Arrays</h2>
+      <h3 class="subsubtopic">What they are and how to create them</h3>
+
+      <p class="post-content">
+        An array is most simply understood as a list of objects in order, much like a todo list you might make for youself at the start of your day or a shopping list. It can be set to a variable for later use. Here's a very basic array: 
+      </p>
+
+      <script src="https://gist.github.com/eksmith/9946043ac4a0c0a96a75.js"></script>
+
+      <p class="post-content">
+        I set it to a variable called 'favorite_games' and then filled it in with string objects. This is a simple way to create an array when you already know some of the things you want to put in it.
       </p>
 
       <p class="post-content">
-        Positioning an element using CSS is like bringing a <a href="http://en.memory-alpha.org/wiki/The_Trouble_with_Tribbles_%28episode%29">tribble</a> back to the Enterprise. It won't stay where you put it and before you know it you have more elements in places they were never supposed to be. <em>(I'm sure there's a better analogy, and any other Trekkies out there feel free to make one, but it won't be as cute.)</em>
+        You can also create a new array by calling the new method on the Array class:
+      </p>
+
+      <script src="https://gist.github.com/eksmith/52ee57d512e902bcc110.js"></script>
+
+      <p class="post-content">
+        So now we have our arrays, but how can we do things with them? What if we need to add things to the array or access just one element? 
+      </p>
+
+      <h3 class="subsubtopic">Accessing Arrays</h3>
+
+      <p class="post-content">
+        Arrays are indexed, which means that every slot in the array has a numbered "address" for where you can find its contents. It's important to note that the numbering begins with 0:
+      </p>
+
+      <script src="https://gist.github.com/eksmith/ece6860d6ab0c6dc0adb.js"></script>
+
+      <p class="post-content">
+        There are many useful methods for arrays. Here are a few to give you an idea of the sorts of things you can do with arrays: 
+      </p>
+
+      <script src="https://gist.github.com/eksmith/ee7b2542bccacfede15e.js"></script>
+
+      <p class="post-content">
+        You can find more Array methods <a href="http://www.ruby-doc.org/core-2.2.0/Array.html#method-i-index"/>here.</a>
+      </p>
+
+      <h2 class="subtopic">Hashes</h2> 
+      <h3 class="subsubtopic">What they are and how to create them</h3>
+
+      <p class="post-content">
+        Hashes are very similar to arrays except that they are unordered and not accessed by index, and entries in a hash are key/value pairs where any object can be a key. They use curly braces {} around their elements instead of the square brackets [] that arrays use and you use a "hash rocket" => to associate a key with a value: 
+      </p>
+
+      <script src="https://gist.github.com/eksmith/09115e506a9cf7bd5fd2.js"></script>
+
+      <p class="post-content">
+        You can also use the hash constructor by calling Hash.new to create a new hash, just as we did for arrays above: 
+      </p>
+
+      <script src="https://gist.github.com/eksmith/7ce8e94d2dccfa755e15.js"></script>
+
+      <h3 class="subsubtopic">Accessing Hashes</h3>
+
+      <p class="post-content">
+        Unlike with arrays, you do not access hash objects with an index. There is no numbering of the objects in an array because, while you may enter them into your hash in a particular order, the hash doesn't keep track of it. Instead, you access particular values in a hash by using their associated key:
+      </p>
+
+      <script src="https://gist.github.com/eksmith/b09e1c3cd1ec8732b391.js"></script>
+
+      <p class="post-content">
+        There are many useful methods for hashes, just as there are for arrays. Here are a few to give you an idea of the sorts of things you can do with hashes: 
+      </p>
+
+      <script src="https://gist.github.com/eksmith/eced1188d91281cd09b5.js"></script>
+
+      <p class="post-content">
+        You can find more built-in methods <a href="http://ruby-doc.org/core-2.2.0/Hash.html">here.</a> 
+      </p>
+
+      <h3 class="subsubtopic">When might you want to use one over the other?</h3>
+
+      <p class="post-content">
+        Now, with a solid grasp of what arrays and hashes are, how you can create them, access them, and use them, you might wonder how you should know when to use one or the other.
       </p>
 
       <p class="post-content">
-        The problem with using positioning is that if you attempt to use it without very clearly understanding what each value does, you might make more problems for yourself and make your page look worse than it would have without any positioning at all. You can generally strong arm elements where you want them to be through trial and error, by applying different values to a selector until it looks how you want it to, but that can be tedious, makes fixing bugs difficult, and can have a domino effect later if you change some other related element's position.
+        Generally, you can create an array to do the same thing you would do with a hash, but for simplicity and readability you might choose a hash over an array if you need to associate something with something else.
       </p>
 
       <p class="post-content">
-        Allow me to pilot you through this murky quadrant of web development space and we might just make it back to Earth.
-      </p>
-
-      <h2 class="subtopic">A preliminary scan of "space"</h2>
-
-      <p class="post-content">
-        To begin with, let's get the lay of the universe we're working in. Elements are presented on a page according to their <b>normal flow</b>. This is just where they fall into place without positioning, sort of like the effect of gravity on objects in the physical world.
-      </p>
-
-      <p class="post-content">
-        The position property in CSS allows you to move elements where you want them to be visually, and to put them <b>out of flow</b> if you wish. The position property itself is pretty self-explanatory. Going into the specific values that this property can take is where it gets complicated. Those values are <span class="key-terms">static</span>, <span class="key-terms">relative</span>, <span class="key-terms">absolute</span>, and <span class="key-terms">fixed</span>.
-      </p>
-
-      <h2 class="subtopic">Static</h2> 
-
-      <p class="post-content">
-        Anything that is not positioned is <span class="key-terms">static</span>. Elements have the static value by default if you don't give them any other value. This means they will just stack together in the normal flow that you have laid for them in your html.
-      </p>
-
-      <h3>HTML</h3>
-
-      <pre><code> 
-        &lt;body&gt;
-              &lt;div id=&quot;box-1&quot;&gt;&lt;/div&gt;
-              &lt;div id=&quot;box-2&quot;&gt;&lt;/div&gt;
-              &lt;div id=&quot;box-3&quot;&gt;&lt;/div&gt;
-        &lt;/body&gt;
-      </code></pre> 
-
-      <h3>CSS</h3>
-      <h4>static by default</h4>
-
-      <pre><code>
-        #box-1 {
-          height: 200px;
-          width: 200px;
-          background-color: red;
-        }
-
-        #box-2 {
-          height: 200px;
-          width: 200px;
-          background-color: #EDDB15;
-        }
-
-        #box-3 {
-          height: 200px;
-          width: 200px;
-          background-color: #15B0ED;
-        }
-      </code></pre>
-
-      <p class="post-content">How it looks:</p> 
-
-      <div class="blog-image"><img src="../imgs/static.jpg"></div>
-
-      <h2 class="subtopic">Relative</h2> 
-
-      <p class="post-content">
-        <span class="key-terms">Relative positioning</span> is a lot like <span class="key-terms">static positioning</span>, except that it allows elements to move left/right/top/bottom. The key with this positioning is that elements move in relationship to where they were <em>originally</em> when they were statically positioned. When elements move in this fashion, no other element moves in to take their place.  They simply leave behind the gap that they used to occupy.
-      </p>
-
-
-      <div class="blog-image"><img src="../imgs/relative.jpg"></div>
-      <pre><code>
-        #box-1 {
-          height: 200px;
-          width: 200px;
-          background-color: red;
-          position: relative;
-          left: 200px;
-        }
-
-        #box-2 {
-          height: 200px;
-          width: 200px;
-          background-color: #EDDB15;
-        }
-
-        #box-3 {
-          height: 200px;
-          width: 200px;
-          background-color: #15B0ED;
-          position: relative;
-          top: 100px;
-        }
-      </code></pre>
-
-      <h2 class="subtopic">Absolute</h2>
-      <p class="post-content">
-        With <span class="key-terms">absolute</span> positioning, the element is positioned exactly where you want it to be. It's taken out of the <b>normal flow</b> that I showed you earlier which was just the stack of boxes. You are able to choose <em>exactly</em> where on the screen you would like for the element to appear and it goes there.  
+        Choose a hash if: 
+        <ul class="list">
+        <li>You need to relate your objects to each other</li>
+        <li>The order of your objects does not matter</li>
+        <li>You do not have rigid requirements for how to access your objects</li>
+        </ul>
       </p>
 
       <p class="post-content">
-        One of the most important things to note about using absolute positioning is that offsetting it with left/right/bottom/top moves it relative to its nearset positioned parent instead of relative to the document. If it has no positioned parent, then it moves relative to the document.
+        Choose an array if: 
+        <ul class="list">
+        <li> You need a simple collection of objects</li> 
+        <li> Their order matters</li>
+        <li> You need to be able to access them by integers</li>
+        </ul>
       </p>
 
+
       <p class="post-content">
-        From <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">Mozilla Developer Network</a>:
+        Here is an example using a restaurant. If we have a dinner menu at a restaurant, a hash is called for because we need to relate a menu item to a price: 
       </p>
 
+      <script src="https://gist.github.com/eksmith/03238ebd137910526a96.js"></script>
+
       <p class="post-content">
-        "Do not leave space for the element. Instead, position it at a specified position relative to its closest positioned ancestor or to the containing block. Absolutely positioned boxes can have margins, they do not collapse with any other margins."
+        We could achieve the same thing with a multidimensional array, but it's not as readable, easy to access, and the menu items aren't really associated with their prices: 
       </p>
 
-      <div class="blog-image"><img src="../imgs/absolute.jpg"></div>
-      <pre><code>
-        #box-1 {
-          height: 200px;
-          width: 200px;
-          background-color: red;
-          position: absolute;
-          left: 100px;
-          top: 100px;
-        }
+      <script src="https://gist.github.com/eksmith/f6124dab194277caebb7.js"></script>
 
-        #box-2 {
-          height: 200px;
-          width: 200px;
-          background-color: #EDDB15;
-          position: absolute;
-          left: 150px;
-          top: 150px;
-        }
-
-        #box-3 {
-          height: 200px;
-          width: 200px;
-          background-color: #15B0ED;
-          position: absolute;
-          left: 200px;
-          top: 200px;
-        }
-      </code></pre>
-
-      <h2 class="subtopic">Fixed</h2>
       <p class="post-content">
-        The final positioning value that you'll see in common use is <span class="key-terms">fixed positioning</span>. You can think of it as gluing the element in place. Even if you scroll down the page, a fixed element will remain exactly where it is on your screen. It is immune to scrolling and behaves relative to the document, not to any parent container.
-      </p>
-      <pre><code>
-        #box-1 {
-          height: 200px;
-          width: 200px;
-          background-color: red;
-          position: absolute;
-          left: 100px;
-          top: 100px;
-        }
-
-        #box-2 {
-          height: 300px;
-          width: 200px;
-          background-color: #EDDB15;
-          position: static;
-        }
-
-        #box-3 {
-          height: 300px;
-          width: 200px;
-          background-color: #15B0ED;
-          position: static;
-        }
-      </code></pre>
-
-      <h2 class="subtopic">Make it So</h2>
-      <p class="post-content">
-        Now, with a basic understanding of the differences between <span class="key-terms">static</span>, <span class="key-terms">relative</span>, <span class="key-terms">absolute</span>, and <span class="key-terms">fixed</span> positioning you know enough about CSS positioning to get yourself into trouble like a true red shirt. 
+        Further following the theme, in this same restaurant, a waiter taking orders would want to use an array rather than a hash. You might think that a waiter would want to associate a person with their order and thus use a hash, but waiters tend to take down orders based on where the guest is sitting around the table. An array would be more appropriate: 
       </p>
 
+      <script src="https://gist.github.com/eksmith/99cde0312f433c563464.js"></script>
+
       <p class="post-content">
-        To avoid wrapping yourself up in utter confusion and breaking the whole layout of your page as you work, try to think carefully about what each positioning value means, what your element's parent is positioned as, and to use your Devtools liberally. 
+        This way, the waiter knows that seat 1, or ticket_21[0] ordered lobster and it will be delivered to the right seat when it's served. With a hash, the seat information is lost and the waiter might not remember where at the table the lobster should go.
       </p>
 
-      <h4 class="subtopic">Resources</h4>
+      <h3 class="subsubtopic">To wrap it all up...</h3>
+
       <p class="post-content">
-        <ul>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">
-            Position: Mozilla Developer Network
-          </a></li>
-          <li><a href="http://alistapart.com/article/css-positioning-101">
-            CSS Positioning 101: A List Apart
-          </a></li>
-          <li><a href="http://learnlayout.com/position.html">
-            Position: Learn Layout
-          </a></li>
-        <ul>
+        Arrays and hashes are flexible data structures that are easy to create, access, and use. Ruby offers powerful built in methods for these classes and with these, you can write a wide variety of robust programs. 
       </p>
     </main>
 
     <h4 class="subtopic">Previous Posts</h4>
     <ul class="postings-list">
       <li>
+        <a href="blog/t2-css-design.html">"How did this get here?!"
+      </li>
         <a href="/blog/c1.chefs.kitchen.html">Creator Culture At DevBootCamp</a>
       </li>
       <li>

@@ -26,11 +26,6 @@ h2 {
   font-family: 'Raleway', cursive;
 }
 
-h3 {
-  text-align: center;
-  font-family: 'Raleway', cursive;
-}
-
 h4 {
 	text-align: center;
 	font-family: 'Raleway', cursive;
@@ -40,6 +35,14 @@ h4 {
   text-align: left;
   font-family: 'Raleway', cursive;
   padding: 20px 20px 20px 0px;
+  color: #4B0775;
+}
+
+.subsubtopic {
+  text-align: left;
+  font-family: 'Raleway', cursive;
+  padding: 0px 20px 20px 0px;
+  color: #4B0775
 }
 
 main {
@@ -72,6 +75,11 @@ main {
 	float: right;
 }
 
+.center_header {
+  text-align: center;
+  font-family: 'Raleway', cursive;
+}
+
 .post-container {
 	padding: 10px;
 }
@@ -88,5 +96,10 @@ main {
 
 .blog-image {
 	padding: 10px;
+}
+
+.list {
+  font-family: 'Raleway', cursive;
+  font-size: 16px;
 }
 
