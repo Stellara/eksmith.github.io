@@ -24,11 +24,11 @@
 
     <div class="featured-post">
 
-      <h1 id="blog-title">Title here</h1>
-      <h3 id="subtitle">Some subtitle here</h3>
+      <h1 id="blog-title">Map</h1>
+      <h3 id="subtitle">An Exploration of Ruby's map method</h3>
 
       <div class="post-container">
-        <h4 id="date">Month Day, Year</h4>
+        <h4 id="date">January 18, 2015</h4>
  
       <p class="post-content">
       Let's say I own a comic book shop and I have a collection of Funko Pop! vinyl toys for sale.
@@ -37,48 +37,81 @@
       <a href="https://www.flickr.com/photos/lorenjavier/5963463530" title="Comic-Con Exclusive Disney Pop! Figures at the Funko Exhibit at Comic-Con by Loren Javier, on Flickr"><img class="center-displayed" src="https://farm7.staticflickr.com/6125/5963463530_cb363b6c79.jpg" width="500" height="333" alt="Comic-Con Exclusive Disney Pop! Figures at the Funko Exhibit at Comic-Con"></a>
 
       <p class="post-content"> 
-
+        These toys will almost always be the same price, except in the case of very special limited edition models. With this in mind, and as a lover of Ruby and a lover of hashes, and as a multi-talented business owner who writes her own inventory and price system, I will represent my stock of toys and their prices with a hash:
       </p>
 
-      <h2 class="subtopic">Subtopic!</h2> 
-      <h3 class="subsubtopic">A subtopic for that subtopic!</h3>
+      <script src="https://gist.github.com/eksmith/e7abf4ccc9cf9044f915.js"></script>
+
+ <!--      <h2 class="subtopic">Subtopic!</h2> 
+      <h3 class="subsubtopic">A subtopic for that subtopic!</h3> -->
 
       <p class="post-content">
-    
-      </p>
-
-      <p class="post-content">
-    
+        But those are just the prices for January, which I have set at the manufacturer's suggested retail price, or MSRP. What if I want to have a sale and lower all of my prices for the whole collection of toys, but I also want to keep a record of what the prices used to be before the sale? 
       </p>
 
       <p class="post-content">
-
+        <a href="http://ruby-doc.org/core-2.2.0/Enumerable.html">The Enumerable module</a> of the Ruby Standard library provides several wonderful methods for looping through a collection like my stock of toys and then performing some operation on each element of that collection. I <em>could</em> use a method called <a href="http://ruby-doc.org/core-2.2.0/Hash.html#method-i-each_value">each_value</a>. This method would loop over my hash, do something to each price (which is what my values are) and then terminate like so: 
       </p>
 
-      <h2 class="subtopic">Some subtopic?</h3>
+      <script src="https://gist.github.com/eksmith/f5dba47debb78980a38f.js"></script>
 
       <p class="post-content">
+        The little rocket => shows what the method returns. You might see right away what the problem with using that method is. The hash is returned unchanged, even though in our block (the part of the code between curly braces) we said that <span class="key-terms">value</span> should be decreased by 1. You might even be asking yourself, "well...did that even <em>do</em> anything?"
+      </p>
 
+      <h2 class="subtopic">Non-Destructive vs. Destructive Methods</h2>
+
+      <p class="post-content">
+        We can use a puts statement in the block to give us some clarity about what's going on: 
+      </p>
+
+      <script src="https://gist.github.com/eksmith/7147211ef135a222eb5d.js"></script>
+
+      <p class="post-content">
+        So we can see that the block containing <span class="key-terms">value   -= 1</span> is in fact being applied to every value in the hash, but it's not storing those changes anywhere or modifying the hash at all.  
       </p>
 
       <p class="post-content">
-
+        This is called a <span class="key-terms">non-destructive</span> method. It performs an operation, but leaves your original object untouched. This should be great for our purposes in lowering prices and retaining a record of the MSRP, right? Not exactly. We still need a structure to store the sale prices, so that we can use this at the cash register. 
       </p>
 
       <p class="post-content">
+        This is where the <span class"key-terms">map</span> method comes in. 
+      </p>
 
+      <h2 class="subtopic">Map</h2>
+
+      <p class="post-content">
+        One mistake that I made in this week's Dev Bootcamp challenges was in forgetting that the <span class="key-terms">Hash</span> class can use methods from the Enumerable module. Enumerable provides its methods as mixins to any class that has an <span class="key-terms">each</span> method, like <span class="key-terms">Hash</span> does. This means that hashes can use <a href="http://ruby-doc.org/core-2.2.0/Enumerable.html#method-i-map">map</a>.  
       </p>
 
       <p class="post-content">
-
+        Map is non-destructive and performs a lot like <span class="key-terms">each</span>, in that it iterates over a collection and applies the code within a block to each member of that collection, but the most important difference is that it returns a brand new array. <em>Even though we're calling map on a hash, the method is still going to return an array and this is important to remember. No matter what type of object you call map on, provided that it can use Enumerable methods, it will return an array.</em> 
       </p>
-
-      <h3 class="subsubtopic">Another subsubtopic...</h3>
 
       <p class="post-content">
-
+        There are methods we could write to change the values of our price hash in place, but we want to keep a record of the original msrp before the sale. So we'll simply send the array returned by map to the cash register: 
       </p>
 
+      <script src="https://gist.github.com/eksmith/1fa0a22d209d26fb0944.js"></script>
+
+      <p class="post-content">
+        With map you can use either <span class="key-terms">do</span> and <span class="key-terms">end</span> to declare your block or you can use curly braces as shown in the following pseudocode:  
+      </p>
+
+      <script src="https://gist.github.com/eksmith/6d6000ddbd8575ce53dc.js"></script>
+
+      <p class="post-content">
+        Map loops through every single element of the collection you call it on, takes each element in turn, applies whatever code to it that you declared inside of the block, and then pushes that result into a new array, which it returns when it has performed the code block on the very last element. 
+      </p> 
+
+      <p class="post-content">
+        Now we might want to have a new hash with our sale prices instead of an array of sale prices, and Enumerable as well as the Hash class itself both have several methods for doing so and we can chain and compose methods together oursevles to achieve this result, but for now, the new array of sale prices is all we need. 
+      </p> 
+
+      <p class="post-content">
+        The keys to using map effectively are to remember that you can only call it on an object that is able to use the Enumerable mixin(which effectively means that the class contains .each), that it iterates through your collection and performs your block on every element, and that it returns a new array of those results without changing the object that you called it on.  
+      </p>
 
       <h4 class="subtopic">Previous Posts</h4>
       <ul class="postings-list">
