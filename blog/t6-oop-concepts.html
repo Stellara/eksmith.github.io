@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One|Pacifico|Raleway' rel='stylesheet' type='text/css'>
+    <title>Adventures in DevBootCamp</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Blog Entries of Erin Smith, DevBootcamp student and apprentice web developer.">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/website.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  </head>
+
+  <body>
+    <header>
+      <a href="/" id="logo">Erin Smith</a>
+      <nav class="header-nav">
+        <a href="#" class="header-links">About</a>
+        <a href="/blog/blogindex.html" class="header-links">Writings</a>
+        <a href="#" class="header-links">Projects</a>
+        <a href="#" class="header-links">Connect</a>
+      </nav>
+    </header>
+
+    <main>
+
+    <div class="featured-post">
+
+      <h1 id="blog-title">Let's Get Cooking</h1>
+      <h3 id="subtitle">Ruby Class Methods</h3>
+
+      <div class="post-container">
+        <h4 id="date">February 4, 2015</h4>
+
+        <p class="post-content">
+          This week's post is about class methods in Ruby. Methods in general are a primary building block of object-oriented programming, as they are the way that messages are passed between objects. They are how objects interact with one another. This post focuses on class methods, which work a bit differently than you might be used to seeing. Let's take a look: 
+        </p>
+
+        <h2 class="subtopic">What are class methods?</h2> 
+ 
+        <p class="post-content">
+          The long and short of it is that class methods are methods that act on the class itself and instance methods are methods that can be called on or within an instance of that class. Class methods will only exist inside of the class that defined them. But what does that really mean? 
+        </p>
+
+        <p class="post-content">
+          That means that if you have the following example class with the following methods: 
+        </p>
+
+        <script src="https://gist.github.com/eksmith/00e2c0c11893f085cffd.js"></script>
+
+        <p class="post-content">
+            Calling the methods will give these results (where '#' and the '=>' denote the output): 
+        </p>
+
+        <script src="https://gist.github.com/eksmith/c7141334dea78a8a58f2.js"></script>
+
+        <p class="post-content">
+            As you can see from the example, calling the instance method on the class itself produces a NoMethod error and calling the class method on the instance does as well. Class methods function only on the class itself. The recipe_format method is a function inherent to the Cupcake class only.
+        </p>
+
+        <h2 class="subtopic">How to use class methods</h2>
+
+        <p class="post-content">
+          You use class methods by defining them inside of the class in one of the following ways: 
+        </p>
+
+        <script src="https://gist.github.com/eksmith/73b78d00877850910d64.js"></script>
+
+        <p class="post-content">
+          There are some more complicated ways of defining class methods, as you can see <a href="http://blog.jayfields.com/2007/10/ruby-defining-class-methods.html">here</a>, but they don't see a lot of mainstream use. After the methods are defined, you then simply call them using the class's name as we saw up above with our Cupcake class example.  
+        </p>
+
+        <h2 class="subtopic">When to use them</h2>
+
+        <p class="post-content">
+          When to use class methods is very much up for debate. Some people completely advocate against using them at all, unless absolutely necessary. Some people goes as far as to claim their hatred for class methods while others <a href="http://devblog.avdi.org/2010/09/14/class-methods-considered-annoying/"> merely find them annoying</a>. 
+        </p>
+
+        <p class="post-content">
+          Eventually we'll get to the point, if you're not there already, where you develop your own taste for such matters. At this point in my education as a novice developer, the discussions swirling around class methods are way deeper than I am ready for and fly way above my head. It's worth it to be aware of the hot topics though. 
+        </p>
+
+        <p class="post-content">
+          My general advice would be to use class methods when you need to perform functions only on the class itself on not on its instances. Looking back to the earlier Cupcake example, while each type of cupcake that you can make and instantiate the class with will have its own unique recipe, the class method recipe_format doesn't actually speak to that. It is a wider function that belongs to Cupcake in general. It belongs to the "thing" that makes kinds of cupcakes, not the kinds of cupcakes themselves. The last step of the recipe_format calls for telling the user how to decorate cupcakes which makes it unique to the Cupcake class rather than applicable to any sibling or parent food class. 
+        </p>
+
+        <p class="post-content">
+          I hope that my basic example and explanations have helped clarify class methods for you. If they haven't, that's ok. I'm just learning too. Jump into the internet, go digging and searching and find your answers if you need to. Be the chef in your own kitchen. 
+        </p>
+      </div> 
+
+
+      <h4 class="subtopic">Previous Posts</h4>
+      <ul class="postings-list">
+        <li>
+            <a href="/blog/t4-enumerable-methods.html">Ruby Map</a>
+        </li>
+        <li>
+            <a href="/blog/t3-arrays-hashes.html">Arrays and Hashes</a>
+        </li>
+        <li>
+          <a href="/blog/c3-thinking-style.html">Down the Rabbit Hole</a>
+        </li>
+        <li>
+          <a href="/blog/t2-css-design.html">"How did this get here?!"</a>
+        </li>
+        <li>
+          <a href="/blog/c1.chefs.kitchen.html">Creator Culture At DevBootCamp</a>
+        </li>
+        <li>
+          <a href="/blog/t1.git.blog.html">"I don't git it!"</a>
+        </li>
+      </ul>
+
+    </main>
+
+    <footer>
+      <nav class="footer-nav">
+        <a href="https://twitter.com/ekristines"><i class="fa fa-twitter fa-3x"></i></a>
+        <a href="http://www.linkedin.com/pub/erin-smith/a9/301/b73"><i class="fa fa-linkedin fa-3x"></i></a>
+        <a href="https://github.com/eksmith"><i class="fa fa-github fa-3x"></i></a>
+      </nav>
+    </footer>
+
+  
+    </body>
+</html>
