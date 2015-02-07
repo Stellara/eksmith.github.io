@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One|Pacifico|Raleway' rel='stylesheet' type='text/css'>
+    <title>Adventures in DevBootCamp</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Blog Entries of Erin Smith, DevBootcamp student and apprentice web developer.">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/website.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  </head>
+
+  <body>
+    <header>
+      <a href="/" id="logo">Erin Smith</a>
+      <nav class="header-nav">
+        <a href="#" class="header-links">About</a>
+        <a href="/blog/blogindex.html" class="header-links">Writings</a>
+        <a href="#" class="header-links">Projects</a>
+        <a href="#" class="header-links">Connect</a>
+      </nav>
+    </header>
+
+    <main>
+
+    <div class="featured-post">
+
+      <h1 id="blog-title">You say Tomato, I say Tomato</h1>
+      <h3 id="subtitle">Ruby Hashes and JavaScript Objects: Secret Twins</h3>
+
+      <div class="post-container">
+        <h4 id="date">February 7, 2015</h4>
+ 
+        <p class="post-content">
+     		This week, we've been expanding our knowledge of object-oriented languages by diving into <span class="key-terms">JavaScript</span>. After spending 4 weeks on Ruby, learning the syntax and getting comfortable with object-oriented programming, JavaScript has been that much easier to learn, but it hasn't been without its pitfalls. As both languages are <span class="key-terms">object-oriented</span>, they share several core similarities that makes learning one easier when you're familiar with the other and the object oriented principles underlying both languagues guide design choices in similar ways, but they also differ in some pretty fundamental ways that can throw you for a loop if you're not prepared for it. There are too many to list in one post, but one in particular that I found very interesting was the difference in Ruby hashes vs. JavaScript hashes...which are actually nonexistent. 
+        </p>
+
+        <p class="post-content"> 
+        	Find that shocking? So did I. 
+        </p>
+
+        <h2 class="subtopic">Ruby Hashes</h2> 
+
+        <p class="post-content">
+    		Ruby hashes are straightforward, easy to define, easy to manipulate, and come with a host of helpful built-in methods, as every hash in Ruby is an instance of the Hash class. If you're unfamiliar with hashes at all or just need a refresher: a hash is a dictionary-like collection of unique keys and their paired values. Implicit creation in Ruby looks like this: 
+        </p>
+
+        <script src="https://gist.github.com/eksmith/95e4f3690b4f7196aa24.js"></script>
+
+        <p class="post-content">
+    		Using the built-in methods you can then do things with a hash like iterate through it and perform an operation on either all of the keys, all of the values, all of the pairs of key and values, or only some of any of those. Really, whatever your particular needs are. In addition, because they are objects, they are conferred with all of the powers that objects in Ruby possess. 
+        </p>
+
+        <h2 class="subtopic">JavaScript...hashes, except they are not a thing</h2> 
+
+        <p class="post-content">
+        	And then we have hashes in JavaScript which do not exist under that label. Unlike Ruby, JavaScript has no dedicated hash class from which to create new hash objects. Instead, it just has <span class="key-terms">objects</span>, which look and in most ways and on most levels, act, just like hashes. For most intents and purposes, JavaScript objects <em>are</em> hashes, but they are not called such and have a bit more going on. 
+        </p>
+
+        <h2 class="subtopic">JavaScript Objects</h2>
+
+        <p class="post-content">
+        	JavaScript objects are mutable collections of properties. Creating them looks like the following: 
+        </p>
+
+        <script src="https://gist.github.com/eksmith/0f4163085f96a77f01fd.js"></script>
+
+        <p class="post-content">
+        	I declared a variable partyInfo, to hold my object and then gave it some properties. Those properties each have a key and an associate valued. guestList is the first key, and the array holding the guests' names is the value. The key must be a string, which JavaScript will do automaticlly with the syntax I used, but the value can be just about anything...even another object, as we see with the playList property. 
+        </p>
+
+        <p class="post-content">
+        	According to the book <a href="http://eloquentjavascript.net/04_data.html">Eloquent JS</a>: "Inside the curly braces, we can give a list of properties separated by commas. Each property is written as a name, followed by a colon, followed by an expression that provides a value for the property. Spaces and line breaks are not significant. When an object spans multiple lines, indenting it like in the previous example improves readability. Properties whose names are not valid variable names or valid numbers have to be quoted."
+        </p>
+
+        <h2 class="subtopic">If it looks like a hash, and smells like a hash...</h3>
+
+        <p class="post-content">
+        	These objects then behave just like objects in any object oriented programming language: they hold state and can receive messages. The point of contention surrounding objects in JavaScript is a perceived conflict of naming. When, for most intents and purposes, JavaScript objects are behaving just like hashes and are hashtables internally, why aren't they just called hashes? It's a matter that's up for constant debate and further digging can probably get you closer to some solid conclusions. 
+        </p>
+
+        <p class="post-content">
+        	If you're like me and longing for the comforting familiarity of Ruby hashes in JavaScript, you can simply define your hash as an object and then set your keys as properties. 
+        </p>
+
+        <p class="post-content">
+        	Learning JavaScript has definitely been frustrating and counterintuitive at times compared to the ease with which I took to Ruby, because major differences like the one we've explored with hashes can be jarring and confusing and make it difficult to grasp the concepts, but the jury is still out on how I feel about JavaScript as a whole. Time will tell. 
+        </p>
+      </div>
+
+
+      <h4 class="subtopic">Previous Posts</h4>
+      <ul class="postings-list">
+        <li>
+            <a href="/blog/t4-enumerable-methods.html">Ruby Map</a>
+        </li>
+        <li>
+            <a href="/blog/t3-arrays-hashes.html">Arrays and Hashes</a>
+        </li>
+        <li>
+          <a href="/blog/c3-thinking-style.html">Down the Rabbit Hole</a>
+        </li>
+        <li>
+          <a href="/blog/t2-css-design.html">"How did this get here?!"</a>
+        </li>
+        <li>
+          <a href="/blog/c1.chefs.kitchen.html">Creator Culture At DevBootCamp</a>
+        </li>
+        <li>
+          <a href="/blog/t1.git.blog.html">"I don't git it!"</a>
+        </li>
+      </ul>
+
+    </main>
+
+    <footer>
+      <nav class="footer-nav">
+        <a href="https://twitter.com/ekristines"><i class="fa fa-twitter fa-3x"></i></a>
+        <a href="http://www.linkedin.com/pub/erin-smith/a9/301/b73"><i class="fa fa-linkedin fa-3x"></i></a>
+        <a href="https://github.com/eksmith"><i class="fa fa-github fa-3x"></i></a>
+      </nav>
+    </footer>
+
+  
+    </body>
+</html>
