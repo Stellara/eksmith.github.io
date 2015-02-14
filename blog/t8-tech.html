@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One|Pacifico|Raleway' rel='stylesheet' type='text/css'>
+    <title>Adventures in DevBootCamp</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Blog Entries of Erin Smith, DevBootcamp student and apprentice web developer.">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/website.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  </head>
+
+  <body>
+    <header>
+      <a href="/" id="logo">Erin Smith</a>
+      <nav class="header-nav">
+        <a href="#" class="header-links">About</a>
+        <a href="/blog/blogindex.html" class="header-links">Writings</a>
+        <a href="#" class="header-links">Projects</a>
+        <a href="#" class="header-links">Connect</a>
+      </nav>
+    </header>
+
+    <main>
+
+    <div class="featured-post">
+
+      <h1 id="blog-title">"#re*g_)exs are %aweso*_m+e".replace(/[^A-Za-z\d\s]+/g, '');</h1>
+      <h3 id="subtitle">=> regexs are awesome</h3>
+
+      <div class="post-container">
+        <h4 id="date">February 14, 2015</h4>
+ 
+        <p class="post-content">
+        The title of this post looks kinda like junk, doesn't it? It's full of extraneous symbols and weirdness, but when you scan to the argument that "replace" takes, it should start to become more clear: We're in the land of <span class="key-terms">regular expressions</span>.
+        </p>
+
+        <h2 class="subtopic">A brief intro to regex</h2> 
+
+        <p class="post-content"> 
+        Regex, or regular expressions, are expressions to define a pattern of characters to match in a string. They are universal and portable. Once you know their syntax, you can use them in any language or even just in text editor. They are definitely worth learning. 
+        </p>
+
+        <h2 class="subtopic">What can you do with regex?</h2> 
+
+        <p class="post-content">
+        If you're doing any work with strings at all, using regular expressions provide immense flexibility in how to process them. Some concrete examples of this are in web development, where regular expressions are used to detect if the email, phone number and address fields of a form contain valid input. Regular expressions can also be used to "clean" input, or to make sure a user is only inputting certain characters. The title of this post is also a very basic example of "sanitizing input".
+        </p>
+
+        <h2 class="subtopic">How to use them</h2>
+
+        <p class="post-content">
+        On a very basic level, regex consist of some variation of this pattern: 
+        </p>
+
+        <p class="post-content">
+        [set of characters]{number of characters to match}
+        </p>
+
+        <p class="post-content">
+        The specifics of how to implement a regex change from language to language, but the syntax will mostly be the same. Some languages such as Java and Ruby require you to create regex objects and with some such JavaScript, you can just work on the string directly (JavaScript will turn the string into a regex object internally). If you're just doing work in your text editor on strings, then you can simply use your editor's find and replace feature, check regex or grep in its options (or settings, etc, this will depend on what you're using) and then enter the regex in find or replace, depending on what you're after.  
+        </p>
+
+        <p class="post-content">
+        One of the very most basic regex you can make is simply a literal: <span class="key-terms">/thingtofind/</span>. With this simple pattern, you are looking for <em>exactly</em> "thingtofind". You can do this with whole strings or single characters. Most of the time though, you'll want to use the special characters that are not literals and that denote special conditions. Here's a table of some of the most common their meanings: 
+        </p>
+
+        <script src="https://gist.github.com/eksmith/9ecfaf682e1fb3487984.js"></script>
+
+        <p class="post-content">
+        You can find fuller tables <a href="http://www.rexegg.com/regex-quickstart.html">here</a>.
+        </p>
+
+        <p class="post-content">
+        With the basic table as reference, let's step into a regex and take a look at how it's working: 
+        </p>
+
+        <script src="https://gist.github.com/eksmith/151be854eafce310703c.js"></script>
+
+        </p>
+        This example is written in JavaScript and is a simple "input sanitation". You can see the starting string is full of crazy symbols. The regex following the replace simply is taking the criteria [^A-Za-z\d_-] and searching for everything that matches it and then replacing that with, well...nothing, as denoted by "". The carrot <span class="key-terms">^</span> means "not". <span class="key-terms">A-Za-z</span> simply means any characters uppercase or lowercase a through z, <span class="key-terms">\d</span> means any digit and the underscore and dash are just literally underscore and dash. In plain English, the regex is matching anything in the target string that is not a letter, number, underscore, or dash, and replacing it with nothing, effectively deleting it. 
+        <p class="post-content">
+
+        <h2 class="subtopic">Regex Has Its Limits Though</h2>
+
+        <p class="post-content">
+        While regex is super flexible and useful, it can't be applied to everything. Using it to validate an e-mail address or street address is such a complex use case that many people argue against trying, many people state that it just can't be done, and others argue for ditching a regex approach altogether for those cases and using a parser. There is an interesting thread on the topic <a href=<"http://stackoverflow.com/questions/201323/using-a-regular-expression-to-validate-an-email-address/201378#201378">here, at StackOverflow</a>. Jeff Atwood of Coding Horror fame also has a great article <a href="http://blog.codinghorror.com/regex-use-vs-regex-abuse/">here</a> on regex use vs abuse. 
+        </p>
+
+
+        <h2 class="subtopic">Some Resources to Learn Regex</h2>
+
+        <p class="post-content">
+        If you're a beginner like me and you'd like to learn regex there are myriad places to do so. The current resource I am using is Zed Shaw's <a href="http://regex.learncodethehardway.org/">Learn Regex the Hard Way</a>. His whole Learn x the Hard Way series is fantastic and interactive. You're not just passively reading articles, but you're running the code yourself from your command line. It's pretty legit. 
+        </p>
+
+        <p class="post-content">
+        If you are a Rubyist, <a href="http://rubular.com/">Rubular</a> is an excellent regex editor, to test your expressions out in. 
+        </p>
+
+        <p class="post-content">
+        Happy pattern matching! 
+        </p>
+      </div>
+
+
+      <h4 class="subtopic">Previous Posts</h4>
+      <ul class="postings-list">
+        <li>
+            <a href="/blog/t4-enumerable-methods.html">Ruby Map</a>
+        </li>
+        <li>
+            <a href="/blog/t3-arrays-hashes.html">Arrays and Hashes</a>
+        </li>
+        <li>
+          <a href="/blog/c3-thinking-style.html">Down the Rabbit Hole</a>
+        </li>
+        <li>
+          <a href="/blog/t2-css-design.html">"How did this get here?!"</a>
+        </li>
+        <li>
+          <a href="/blog/c1.chefs.kitchen.html">Creator Culture At DevBootCamp</a>
+        </li>
+        <li>
+          <a href="/blog/t1.git.blog.html">"I don't git it!"</a>
+        </li>
+      </ul>
+
+    </main>
+
+    <footer>
+      <nav class="footer-nav">
+        <a href="https://twitter.com/ekristines"><i class="fa fa-twitter fa-3x"></i></a>
+        <a href="http://www.linkedin.com/pub/erin-smith/a9/301/b73"><i class="fa fa-linkedin fa-3x"></i></a>
+        <a href="https://github.com/eksmith"><i class="fa fa-github fa-3x"></i></a>
+      </nav>
+    </footer>
+
+  
+    </body>
+</html>
