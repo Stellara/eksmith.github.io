@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A handy cheat sheet to refer to when refactoring">
+    <title>Code Smells</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/codesmells.css">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans|Pacifico' rel='stylesheet' type='text/css'>
+  </head>
+
+   <body>
+   	<header>
+      <h2 id="title">Code Smells Cheat Sheet: Red Flags for Refactoring</h2>
+    </header>
+
+    <main>
+      <section>
+        <h3 id="subtitle">What is a code smell?</h3>
+        <p id="quote">
+        "A code smell is a surface indication that usually corresponds to a deeper problem in the system. Smells are certain structures in the design that indicate violation of fundamental design principles and negatively impact design quality". Code smells are usually not bugs—they are not technically incorrect and do not currently prevent the program from functioning. Instead, they indicate weaknesses in design that may be slowing down development or increasing the risk of bugs or failures in the future. - <a href="http://martinfowler.com/bliki/CodeSmell.html"> Martin Fowler on Code Smells</a>
+        </p>
+      </section>
+
+      <section>
+        <table class="categories">
+          <thead>
+            <tr><th colspan="0" id="table-title">Categorization of Code Smells</th></tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="cell", id="bloaters">Bloaters </td>
+              <td class="cell", id="abusers">OO Abusers</td>
+              <td class="cell", id="change-prev">Change Preventers</td>
+              <td class="cell", id="couplers">Couplers</td>
+              <td class="cell", id="dispensables">Dispensables</td>
+            </tr>
+            <tr>
+              <td class="cell", id="bloaters">Bloater smells represent something that has grown so large that it cannot be effectively handled.</td>
+              <td class="cell", id="abusers">These represent cases where the solution does not fully exploit the possibilities of object-oriented design.</td>
+              <td class="cell", id="change-prev">Change Preventers are smells is that hinder changing or further developing the software.</td>
+              <td class="cell", id="couplers">Coupling is the extent to which any component of your software depends on other components.</td>
+              <td class="cell", id="dispensables">The common thing for the Dispensable smells is that they all represent something unnecessary that should be removed from the source code.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="lists-container">
+      <section class="list-block" id="left-list">
+        <h2 id="subtitle">Code Smells Within Classes</h2>
+        <ul>
+          <li>Excessive obscuring comments</li>
+          <li><div id="bloaters">Long methods<div></li>
+          <li><div id="bloaters">Long parameter list</div></li>
+          <li><div id="dispensables">Duplicated code</div></li>
+          <li>Keep it D.R.Y </li>
+          <li>Conditional Complexity</li>
+          <li><div id="bloaters">Large Classes</div></li>
+          <li>Type Embedded in Name</li>
+          <li>Uncommunicative Name</li>
+          <li>Inconsistent Names</li>
+          <li><div id="dispensables">Dead code</div></li>
+          <li><div id="dispensables">Speculative Generality</div></li>
+          <li>Oddball Solution</li>
+          <li><div id="abusers">Temporary Field</div></li> 
+        </ul>
+      </section>
+
+      <section class="list-block", id="right-list">
+        <h2 id="subtitle">Code Smells Between Classes</h2>
+        <ul>
+        <li><div id="abusers">Alternative Classes with Different Interfaces</div></li>
+        <li><div id="bloaters">Primitive Obsession</div></li>
+        <li><div id="dispensables">Data Class</div></li>
+        <li><div id="bloaters">Data Clumps</div></li>
+        <li><div id="abusers">Refused Bequest</div></li>
+        <li><div id="couplers">Inappropriate Intimacy</div></li>
+        <li>Indecent Exposure</li>
+        <li><div id="couplers">Feature Envy</div></li>
+        <li><div id="dispensables"><Lazy Class</div></li>
+        <li><div id="couplers">Message Chains</div></li>
+        <li><div id="couplers">Middle Man</div></li>
+        <li><div id="change-prev">Divergent Change<div></li>
+        <li><div id="change-prev">Shotgun Surgery</div></li>
+        <li><div id="change-prev">Parallel Inheritance Hierarchies<div></li>
+        <li>Incomplete Library Class</li>
+        <li>Solution Sprawl</li>
+        </ul>
+      </section>
+      </div>
+
+      <section id="resources">
+        <h3 id="subtitle">Resources</h3>
+        <ul class="resource-list">
+          <li><a href="http://blog.codinghorror.com/code-smells/">Code Smells at Coding Horror</a></li>
+          <li><a href="http://mikamantyla.eu/BadCodeSmellsTaxonomy.html">Taxonomy of Code Smells</a></li>
+        <ul>
+      </section>
+    </main>
+
+    <footer>
+    </footer>
+   </body>
+</html>

@@ -1,0 +1,117 @@
+section {
+	font-family: 'Open Sans', sans-serif;
+}
+
+header {
+	background-color: #00CFCF;
+	padding: 20px;
+	box-shadow: 10px 10px 5px #888888;
+	margin-bottom: 75px;
+}
+
+a {
+	text-decoration: none;
+	color: #008A8A;
+}
+
+a:visited {
+	color: grey;
+}
+
+a:hover {
+	color: #2FEDE4
+}
+
+#title {
+	font-family: 'Droid Serif', serif;
+	font-size: 35px;
+	color: white;
+	text-align: center;
+}
+
+.list-block {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.lists-container {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#table-title {
+	font-size: 25px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.categories {
+	font-family: 'Droid Serif', serif;
+	width: 700px;
+	margin: 75px auto 75px auto;
+}
+
+.cell {
+	padding: 20px 50px 20px 50px;
+	text-align: center;
+	font-family: 'Droid Serif';
+	font-size: 20px;
+	color: white;
+}
+
+#bloaters {
+	background-color: #7F4E89;
+	font-family: 'Droid Serif';
+	color: white;
+}
+
+#abusers {
+	background-color: #4E9991;
+	font-family: 'Droid Serif';
+	color: white;
+}
+
+#change-prev {
+	background-color: #535396;
+	font-family: 'Droid Serif';
+	color: white;
+}
+
+#couplers {
+	background-color: #8A3A42;
+	font-family: 'Droid Serif';
+	color: white;
+}
+
+#dispensables {
+	background-color: #481657;
+	font-family: 'Droid Serif';
+	color: white;
+}
+
+#left-list {
+	padding-right: 50px;
+}
+
+#right-list {
+	padding-left: 50px;
+}
+
+#subtitle {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+
+#quote {
+	font-style: italic;
+	padding-left: 100px;
+	padding-right: 100px;
+  text-align: center;
+}
+
+.resource-list {
+	text-align: center;
+}
+
+#resources {
+	padding-top: 50px;
+}
