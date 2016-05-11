@@ -1,4 +1,4 @@
 eksmith.github.io
 =================
 
-Dev Bootcamp Phase 0 github pages. Home to Phase 0 blog posts. 
+My first attempt at a personal website when I was just beginning my journey as a developer. It remains as a marker to see how far I've grown. 
